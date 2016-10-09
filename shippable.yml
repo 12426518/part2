@@ -8,7 +8,6 @@ env:
     - JBOSS_HOME=/t
 mp/jboss-as-7.1.0.Final
     - JBOSS_SERVER_LOCATION=http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.tar.gz
-    - OPENSHIFT_REPO=ssh://git@github.com:12426518/part2.git
 before_install:
   - if [ ! -e $JBOSS_HOME ]; then curl -s $JBOSS_SERVER_LOCATION | tar zx -C /tmp; fi
   - git remote -v | grep ^openshift || git remote add openshift $OPENSHIFT_REPO
